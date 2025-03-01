@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    style="@style/screen"
     android:padding="16dp">
 
     <!-- Buttons for selecting charts -->
@@ -16,6 +17,7 @@
 
         <Button
             android:id="@+id/btnBarChart"
+            style="@style/button"
             android:layout_width="0dp"
             app:cornerRadius="8dp"
             android:layout_marginEnd="2dp"
@@ -27,6 +29,7 @@
 
         <Button
             android:id="@+id/btnLineChart"
+            style="@style/button"
             android:layout_width="0dp"
             android:layout_marginEnd="2dp"
             android:layout_marginStart="2dp"
@@ -38,6 +41,7 @@
 
         <Button
             android:id="@+id/btnPieChart"
+            style="@style/button"
             android:layout_width="0dp"
             android:layout_marginEnd="2dp"
             android:layout_marginStart="2dp"
@@ -49,6 +53,7 @@
 
         <Button
             android:id="@+id/btnScatterChart"
+            style="@style/button"
             android:layout_width="0dp"
             app:cornerRadius="8dp"
             android:backgroundTint="#3F51B5"
