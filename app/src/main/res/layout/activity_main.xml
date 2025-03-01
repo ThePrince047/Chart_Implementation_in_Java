@@ -1,67 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
 
+    <!-- Buttons for selecting charts -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="4">
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:rowCount="2"
-            android:columnCount="2"
-            android:layout_margin="8dp">
+        <Button
+            android:id="@+id/btnBarChart"
+            android:layout_width="0dp"
+            app:cornerRadius="8dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:backgroundTint="#3F51B5"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Bar Chart" />
 
-            <com.github.mikephil.charting.charts.BarChart
-                android:id="@+id/barChart"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_row="0"
-                android:layout_column="0"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"/>
+        <Button
+            android:id="@+id/btnLineChart"
+            android:layout_width="0dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            app:cornerRadius="8dp"
+            android:backgroundTint="#3F51B5"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Line Chart" />
 
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/lineChart"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"/>
+        <Button
+            android:id="@+id/btnPieChart"
+            android:layout_width="0dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            app:cornerRadius="8dp"
+            android:backgroundTint="#3F51B5"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pie Chart" />
 
-            <com.github.mikephil.charting.charts.PieChart
-                android:id="@+id/pieChart"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_row="1"
-                android:layout_column="0"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"/>
-
-            <com.github.mikephil.charting.charts.RadarChart
-                android:id="@+id/radarChart"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_row="1"
-                android:layout_column="1"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"/>
-
-        </GridLayout>
-
+        <Button
+            android:id="@+id/btnScatterChart"
+            android:layout_width="0dp"
+            app:cornerRadius="8dp"
+            android:backgroundTint="#3F51B5"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Scatter Chart" />
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- FrameLayout to replace charts dynamically -->
+    <FrameLayout
+        android:id="@+id/chartContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#EEEEEE"/>
+
+</LinearLayout>
