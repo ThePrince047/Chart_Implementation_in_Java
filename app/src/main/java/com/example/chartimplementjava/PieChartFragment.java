@@ -40,6 +40,7 @@ public class PieChartFragment extends Fragment {
         PieData pieData = new PieData(dataSet);
         pieChart.setData(pieData);
         pieChart.setUsePercentValues(true);
+        pieChart.animateXY(1000, 1000);
         pieChart.invalidate(); // Refresh chart
 
         return view;
